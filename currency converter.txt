@@ -1,0 +1,285 @@
+currency converter
+using API 
+currency converter API
+
+API
+application programming interface
+an api is the messenger that take requests and tells a system what user want and returns the response
+it takes requests from user and seraches in database and returns response tio user
+
+taking any api's into js 
+any api's we can provide throught its respective link to call in js
+at last some variable going to change according to that dadta is going to change
+
+whenver we calls api we get response
+
+const url='https://open.er-api.com/v6/latest/USD';
+
+let response=fetch(url);
+console.log(response)
+
+we get response and  consoling that we get promise (it is like api is telling that i wl get i promise you)
+Promise {<pending>}             	//promise intaillay will be in pending (depending on the serverside )
+[[Prototype]]: Promise			//
+[[PromiseState]]: "fulfilled"
+[[PromiseResult]]: Response
+
+but this promise will not be in undertandable format so we have to convert that into json format
+
+const url='https://open.er-api.com/v6/latest/USD';//iniatised url through the google
+
+//using then method we r doing response to json (understandable)
+
+let data=fetch(url).then(response=>response.json().then(data=>data.rates));//writting function using the then operator
+
+above lines say that data= fetching url than make reponse into json(understandable) and in that data returns the rates(mentioned in api dicumentation)
+
+let data=fetch(url).then(response=>resonse.json()).then(data=>data=>rates)
+
+
+
+
+
+ex;-// const url='https://open.er-api.com/v6/latest/USD';
+
+// //using then method we r doing response to json (understandable)
+
+// let data=fetch(url).then(response=>response.json().then(data=>data.rates));
+
+
+// console.log(data)
+
+
+
+
+promise
+whenever we request to api it provides promise
+
+
+Promise {<pending>}      //it has 3 stages(pending,fullfilled,failed)        
+[[Prototype]]: Promise
+[[PromiseState]]: "fulfilled"
+[[PromiseResult]]: Response
+
+
+pending,fullfilled,failed
+
+pending means it wont affect anything to data
+fullfilled it will do the needful 
+failed it wont do the needful
+
+
+const url=`https://open.er-api.com/v6/latest/${currencyOne}`;    //copied the api from google and pasted with literal templates of currency
+
+console.log(url)						//consoling only the url will not be in readable form so json is required
+ console.log(fetch(url).then(res=>res.json));			//fetching means getting the data and .then means after response res is a higher order function for response
+								and res.json makes the url in readable form
+}
+
+
+fetch is a function to run/call a library in js
+
+console.log(fetch(url).then(res=>res.json()).then
+ (data=>data.rates));
+
+in above function we called rates using api data which is coming through the 
+json will become data and returns data returns
+
+
+rates is a library part of tht api so we r getting many countries rates in console.log
+now in both the currenncy ine and currencytwo have api library's
+
+
+console.log(
+ fetch(url).then(res=>res.json())
+ .then(data=>data.rates[currencyTwo]))
+
+
+in the above function we r intailaising currencytwo to display beacuse currency one we will be giving  anf it changes the vallue automatically
+
+
+fetch(url)                              //fetching url	
+ .then((res)=>res.json())		//converting reposne into json		
+ .then((data)=>{			//consoling the rates in the data
+const rates=data.rates[currencyTwo];
+console.log(rates)			//consoling the rates 
+})};
+
+
+
+fetch(url)						//feteched url	
+ .then((res)=>res.json())				//converted into json		
+ .then((data)=>{					//then in data	(which us thr in json) its inbuilt word
+const rates=data.rates[currencyTwo];			//intialising currency two element as data rates
+amountTwoE1.value=(amountOneE1.value*rates).toFixed(6);//and assigningamount2 column value* 2 rate ) and fixed can be see in example 
+
+
+usd=1        //here we can give input we cant see any output over here
+inr=74.5   //here we can see the output we cant give any input here.
+
+ifusd=2
+inr =149.080000 because as per formula amount.value*2
+.to fixed can be used to get the decimal numbers after . if it 1 one number will given after decimal
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
